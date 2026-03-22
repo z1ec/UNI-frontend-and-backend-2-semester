@@ -1,0 +1,143 @@
+{
+  "info": {
+    "name": "Prakticheskaya 3 Users API",
+    "_postman_id": "5f016cea-91aa-458f-abf3-c7a25d08f2d2",
+    "description": "Коллекция запросов для практической работы 3",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "weatherApiKey",
+      "value": ""
+    },
+    {
+      "key": "exchangeApiKey",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "Get Users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/users",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "users"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get User By Id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/users/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "users",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Мария\",\n  \"age\": 22\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/users",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "users"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Weather API",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.openweathermap.org/data/2.5/weather?q=Moscow&appid={{weatherApiKey}}&units=metric&lang=ru",
+          "protocol": "https",
+          "host": [
+            "api",
+            "openweathermap",
+            "org"
+          ],
+          "path": [
+            "data",
+            "2.5",
+            "weather"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "Moscow"
+            },
+            {
+              "key": "appid",
+              "value": "{{weatherApiKey}}"
+            },
+            {
+              "key": "units",
+              "value": "metric"
+            },
+            {
+              "key": "lang",
+              "value": "ru"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Exchange API",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://v6.exchangerate-api.com/v6/{{exchangeApiKey}}/latest/USD",
+          "protocol": "https",
+          "host": [
+            "v6",
+            "exchangerate-api",
+            "com"
+          ],
+          "path": [
+            "v6",
+            "{{exchangeApiKey}}",
+            "latest",
+            "USD"
+          ]
+        }
+      }
+    }
+  ]
+}

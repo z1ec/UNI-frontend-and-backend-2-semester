@@ -1,0 +1,174 @@
+.page {
+    min-height: 100vh;
+    background: #f4f6fb;
+}
+
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #d7deea;
+}
+
+.header__inner,
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.header__right {
+    color: #6b7280;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.title {
+    margin: 0;
+    font-size: 28px;
+}
+
+.list {
+    display: grid;
+    gap: 12px;
+}
+
+.productRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 12px;
+    background: #ffffff;
+    border: 1px solid #d7deea;
+}
+
+.productMain {
+    flex: 1;
+}
+
+.productTitle {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.productMeta,
+.productDescription,
+.productStock {
+    color: #5b6472;
+}
+
+.productDescription {
+    margin-top: 8px;
+}
+
+.productPrice {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.productActions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.btn {
+    padding: 10px 14px;
+    border: 0;
+    border-radius: 8px;
+    background: #d9e3f8;
+    cursor: pointer;
+}
+
+.btn--primary {
+    background: #3498db;
+    color: #ffffff;
+}
+
+.btn--danger {
+    background: #f7d5d8;
+}
+
+.empty {
+    padding: 20px;
+    border-radius: 12px;
+    background: #ffffff;
+    border: 1px solid #d7deea;
+}
+
+.backdrop {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.35);
+    padding: 16px;
+}
+
+.modal {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 12px;
+    background: #ffffff;
+    border: 1px solid #d7deea;
+}
+
+.modal__header,
+.modal__footer {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal__title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.form {
+    padding: 0 16px 16px;
+    display: grid;
+    gap: 12px;
+}
+
+.input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d7deea;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.input--textarea {
+    min-height: 96px;
+    resize: vertical;
+}
+
+@media (max-width: 768px) {
+    .toolbar,
+    .productRow,
+    .productActions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

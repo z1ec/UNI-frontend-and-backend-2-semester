@@ -1,0 +1,25 @@
+{
+  "user": {
+    "name": "Иван",
+    "age": 25,
+    "isStudent": true,
+    "courses": [
+      "Математика",
+      "Физика",
+      "Информатика"
+    ],
+    "address": {
+      "city": "Москва",
+      "street": "Ленина"
+    }
+  },
+  "weatherRequest": {
+    "city": "Moscow",
+    "lang": "ru",
+    "units": "metric"
+  },
+  "currencyRequest": {
+    "base": "USD",
+    "target": "RUB"
+  }
+}
